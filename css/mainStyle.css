@@ -1,0 +1,32 @@
+:root {
+    /*Main navigation Ccolours */
+    --mainNavTextColour: #ff1e1e;
+  }
+
+/* *-allows to select all elements, using this to remove 
+default styling on a global level */
+*{
+    padding: 0; /*Removing default padding */
+    margin: 0;  /*Removing default margins */
+}
+
+/* Navigation Styling*/
+#mainNavigation li{
+    list-style-type:none; /* Removing default list item styling */
+}
+#mainNavigation a, #mainNavigation a:visited{
+    text-decoration: none; /* Removing default link styling */ 
+    color: var(--mainNavTextColour); /* Setting defaul nav link colours */
+}
+#currentNavLink {
+    pointer-events: none; /* Disables click event */
+    background-color: #000;
+}
+/* END Navigation Styling */
+
+/* Header Styling */
+
+/* END Header Styling */
+
+
+
