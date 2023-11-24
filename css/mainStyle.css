@@ -1,7 +1,13 @@
 :root {
-    /*Main navigation Ccolours */
+    /*Main navigation Colours */
     --mainNavTextColour: #2f00ff;
     --mainNavSelectedTextColour: #fff;
+
+    --mainNavColour: #00ff40;
+    --mainNavSelectedColour: #ff00ff;
+    /* END Main nevigation Colours */
+
+    
   }
 
 /* *-allows to select all elements, using this to remove 
@@ -14,6 +20,7 @@ default styling on a global level */
 /* Navigation Styling*/
 #mainNavigation{
     color: var(--mainNavTextColour);
+    background-color: var(--mainNavColour);
 }
 #mainNavigation li{
     list-style-type:none; /* Removing default list item styling */
@@ -22,10 +29,13 @@ default styling on a global level */
     text-decoration: none; /* Removing default link styling */ 
     color: var(--mainNavTextColour); /* Setting defaul nav link colours */
 }
-#currentNavLink{
+#currentNavLink, #currentNavLink a, #currentNavLink a:visited{
     pointer-events: none; /* Disables click event */
-    background-color: #000;
+    background-color: var(--mainNavSelectedColour);
+    color: var(--mainNavSelectedTextColour);
+    
 }
+
 
 /* END Navigation Styling */
 
