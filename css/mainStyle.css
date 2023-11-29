@@ -133,8 +133,17 @@ h1{
 
 /* END Header Styling */
 section{
-    border: 4px solid #ff00ff;
 
+    /* testing value
+    border: 4px solid #ff00ff;
+    */
+    margin: 0em 0.2em 0.5em;
+    padding: 0.3em;
+
+}
+
+.homePageMain img{
+    border: 4px solid #ff00ff;
 }
 /* Footer Styling */
 footer{
