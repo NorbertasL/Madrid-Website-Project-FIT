@@ -22,28 +22,73 @@ default styling on a global level */
 }
 
 /* Navigation Styling*/
-#mainNavigation{
-    color: var(--mainNavTextColour);
+
+/* Menu Icon(Label) that sits over the checkbox*/
+#hamburgerMenu {
+    display: flex;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(
+        to bottom, 
+        var(--mainNavColour), var(--mainNavColour), 
+        white 20%, white 40%, 
+        var(--mainNavColour) 40%, var(--mainNavColour) 60%, 
+        white 60%, white 80%, 
+        var(--mainNavColour) 80%, var(--mainNavColour) 100%
+    );
+}
+  
+#hamburgerMenu #mainNavigationMenu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
     background-color: var(--mainNavColour);
+    transition: .5s;
+    box-sizing: border-box;
 }
-#mainNavigation li{
-    list-style-type:none; /* Removing default list item styling */
+  
+#hamburgerMenu h3 {
+    text-align: center;
+    color: var(--mainNavTextColour);
+    font-size: 2.2rem;
 }
-#mainNavigation a, #mainNavigation a:visited{
-    text-decoration: none; /* Removing default link styling */ 
-    color: var(--mainNavTextColour); /* Setting defaul nav link colours */
+#mainNavigationMenu a, #mainNavigationMenu a:visited {
+    color: var(--mainNavTextColour);
+    font-size: 1.3rem;
+    text-decoration: none;
 }
+#mainNavigationMenu li{
+    padding: 10px;
+}
+/* Checkbox that shows and hides the navigation menu */
+#hamburgerInput{
+    display: none;
+}
+#hamburgerInput:checked + #hamburgerMenu #mainNavigationMenu {
+      visibility: visible;
+      left: 0;
+}
+
+/* Styling for the current nav link */
 #currentNavLink, #currentNavLink a, #currentNavLink a:visited{
     pointer-events: none; /* Disables click event */
     background-color: var(--mainNavSelectedColour);
     color: var(--mainNavSelectedTextColour);
     
 }
-
+ 
 
 /* END Navigation Styling */
 
 /* Header Styling */
+h1{
+    text-align: center;
+}
 
 /* END Header Styling */
 section{
