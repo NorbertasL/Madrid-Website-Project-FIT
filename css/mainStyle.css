@@ -1,11 +1,15 @@
 :root {
-    /*Main navigation Colours */
+    /* Main navigation Colours */
     --mainNavTextColour: #2f00ff;
     --mainNavSelectedTextColour: #fff;
 
     --mainNavColour: #00ff40;
     --mainNavSelectedColour: #ff00ff;
     /* END Main nevigation Colours */
+
+    /* Footer Colours */
+    --mainFooterColour: var(--mainNavColour);
+    /* END Footer Colours */
 
     
   }
@@ -42,6 +46,14 @@ default styling on a global level */
 /* Header Styling */
 
 /* END Header Styling */
+section{
+    border: 4px solid #ff00ff;
+}
+/* Footer Styling */
+footer{
+    background-color: var(--mainFooterColour);
+}
+/* END Footer Styling */
 
 
 
