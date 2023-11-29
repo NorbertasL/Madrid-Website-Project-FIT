@@ -1,10 +1,16 @@
 :root {
+    /* Website Main Colours https://designs.ai/colors/palette/337*/
+    --websiteMainColour: #00d1ff;
+    --websiteSecondColour: #00fff0;
+    --websiteThirdColour:#fafaf6;
+    /* END Website Main Colours */
+
     /* Main navigation Colours */
-    --mainNavTextColour: #2f00ff;
+    --mainNavTextColour: var(--websiteThirdColour);
     --mainNavSelectedTextColour: #fff;
 
-    --mainNavColour: #00ff40;
-    --mainNavSelectedColour: #ff00ff;
+    --mainNavColour: var(--websiteMainColour);
+    --mainNavSelectedColour: var(--websiteSecondColour);
     /* END Main nevigation Colours */
 
     /* Footer Colours */
@@ -19,25 +25,43 @@ default styling on a global level */
 *{
     padding: 0; /*Removing default padding */
     margin: 0;  /*Removing default margins */
+    font-family: Sans-serif;
+}
+
+/* Page Fade In */
+body {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 
 /* Navigation Styling*/
 
 /* Menu Icon(Label) that sits over the checkbox*/
 #hamburgerMenu {
-    display: flex;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(
         to bottom, 
-        var(--mainNavColour), var(--mainNavColour), 
-        white 20%, white 40%, 
-        var(--mainNavColour) 40%, var(--mainNavColour) 60%, 
-        white 60%, white 80%, 
-        var(--mainNavColour) 80%, var(--mainNavColour) 100%
+        #000 0%, #000 20%, 
+        #fff 20%, #fff 40%,
+        #000 40%, #000 60%, 
+        #fff 60%, #fff 80%,
+        #000 80%, #000 100%
     );
+    border: 1px solid #000;
+    border-radius: 0px 0px 40px 0px;
+
 }
   
 #hamburgerMenu #mainNavigationMenu {
@@ -47,18 +71,24 @@ default styling on a global level */
     left: -250px;
     width: 200px;
     height: 100%;
+    /*
     background-color: var(--mainNavColour);
+    */
+    background: linear-gradient(to right, var(--mainNavColour), white);
     transition: .5s;
     box-sizing: border-box;
+    box-shadow: 0 0 5px 10px var(--websiteThirdColour);
 }
   
 #hamburgerMenu h3 {
     text-align: center;
     color: var(--mainNavTextColour);
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-size: 2.2rem;
 }
 #mainNavigationMenu a, #mainNavigationMenu a:visited {
     color: var(--mainNavTextColour);
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
     text-decoration: none;
 }
@@ -70,29 +100,41 @@ default styling on a global level */
     display: none;
 }
 #hamburgerInput:checked + #hamburgerMenu #mainNavigationMenu {
-      visibility: visible;
-      left: 0;
+    visibility: visible;
+    left: 0;
 }
 
 /* Styling for the current nav link */
 #currentNavLink, #currentNavLink a, #currentNavLink a:visited{
     pointer-events: none; /* Disables click event */
-    background-color: var(--mainNavSelectedColour);
-    color: var(--mainNavSelectedTextColour);
     
+    color: var(--mainNavSelectedTextColour);  
+}
+#currentNavLink{
+    background-color: var(--mainNavSelectedColour);
+    box-shadow: 3px 0px 5px 0px var(--mainNavSelectedColour);
 }
  
 
 /* END Navigation Styling */
 
 /* Header Styling */
+#pageHeader{
+    /* 
+    background-color: var(--websiteMainColour);
+    */
+    background-image: linear-gradient(var(--websiteMainColour) 50%, white);
+    padding: 0.5em;
+}
 h1{
     text-align: center;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* END Header Styling */
 section{
     border: 4px solid #ff00ff;
+
 }
 /* Footer Styling */
 footer{
@@ -100,5 +142,10 @@ footer{
 }
 /* END Footer Styling */
 
-
-
+.flexContainerColumn{
+    display: flex;
+    flex-direction: column;
+}
+.flexContainer{
+    display: flex;
+}
