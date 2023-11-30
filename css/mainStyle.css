@@ -154,6 +154,10 @@ main > section{
 
 }
 
+main > section > section{
+    margin-top: 15px;
+}
+
 section img{
     width: 100%;
     border-radius: 1em;
