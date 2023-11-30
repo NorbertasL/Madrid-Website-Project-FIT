@@ -26,7 +26,23 @@
         <h1>Contact Us</h1>
     </header>
     <main class="flexContainer">
+      <h2>Form Validation</h2>
+        <form id="myForm" action="" novalidate>
+          <div class="form-control">
+            <label for="fullName">Your full name</label>
+            <input required id="fullName" type="text" name="full_name" />
+            <div class="field-error"></div>
+          </div>
 
+          <div class="form-control">
+              <label for="emailAddress">Your email</label>
+              <input required id="emailAddress" type="email" name="email_address" />
+            <div class="field-error"></div>
+          </div>
+
+          <input type="submit" value="Go!" />
+
+      <script src="js/form.js"></script>
     </main>
     <footer>Social Links Here</footer>
   </body>
