@@ -26,6 +26,7 @@ default styling on a global level */
     padding: 0; /*Removing default padding */
     margin: 0;  /*Removing default margins */
     font-family: Sans-serif;
+    
 }
 
 /* Page Fade In */
@@ -33,6 +34,13 @@ body {
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
+    /* smallest supported screen width */
+    min-width: 360px;
+
+    /* max width so it still looks ok on big screens like tvs */
+    max-width: 1400px;
+ 
 }
  
 @keyframes fadeInAnimation {
@@ -123,28 +131,34 @@ body {
     /* 
     background-color: var(--websiteMainColour);
     */
+    width: 100%;
     background-image: linear-gradient(var(--websiteMainColour) 50%, white);
-    padding: 0.5em;
+    padding: 2px;
 }
 h1{
+    font-size: 3em;
     text-align: center;
     text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* END Header Styling */
-section{
+main > section{
 
     /* testing value
     border: 4px solid #ff00ff;
     */
-    margin: 0em 0.2em 0.5em;
-    padding: 0.3em;
+    margin: 5px;
+    padding: 2px;
+
+    border: solid 1px;
 
 }
 
-.homePageMain img{
-    border: 4px solid #ff00ff;
+section img{
+    width: 100%;
+    border-radius: 1em;
 }
+
 /* Footer Styling */
 footer{
     background-color: var(--mainFooterColour);
