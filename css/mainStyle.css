@@ -258,11 +258,11 @@ footer{
 
     #mainNavigationMenu li{
         display:inline;
-        color: red;
+        
     }
-
-   
-
+    #pageHeader{
+        padding-bottom: 10px;
+    }
 }
-
+    
 
