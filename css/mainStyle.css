@@ -2,11 +2,12 @@
     /* Website Main Colours https://designs.ai/colors/palette/337*/
     --websiteMainColour: #00d1ff;
     --websiteSecondColour: #00fff0;
-    --websiteThirdColour:#fafaf6;
+    --websiteThirdColour:#fff5d0;
+    --websiteFouthColour:#fcebad;
     /* END Website Main Colours */
 
     /* Main navigation Colours */
-    --mainNavTextColour: var(--websiteThirdColour);
+    --mainNavTextColour: white;
     --mainNavSelectedTextColour: #fff;
 
     --mainNavColour: var(--websiteMainColour);
@@ -31,6 +32,7 @@ default styling on a global level */
 
 /* Page Fade In */
 body {
+    background-color: var(--websiteThirdColour);
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -74,7 +76,7 @@ body {
     border-radius: 0px 0px 40px 0px;
 
 }
-  
+ 
 #hamburgerMenu #mainNavigationMenu {
     visibility: hidden;
     position: fixed;
@@ -135,13 +137,21 @@ body {
     background-color: var(--websiteMainColour);
     */
     width: 100%;
-    background-image: linear-gradient(var(--websiteMainColour) 50%, white);
+    background-image: linear-gradient(var(--websiteMainColour) 50%, var(--websiteThirdColour));
     padding: 2px;
+
+    border-bottom-left-radius: 15px;;
+    border-bottom-right-radius: 15px;;
 }
 h1{
     font-size: 3em;
     text-align: center;
     text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+header h2{
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
 /* END Header Styling */
@@ -153,12 +163,21 @@ main > section{
     margin: 5px;
     padding: 2px;
 
-    border: solid 1px;
+    border-radius: 10px;
 
+    background-color: var(--websiteFouthColour);
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 main > section section{
+    margin: 5px;
     margin-top: 15px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 main p{
@@ -168,7 +187,7 @@ main p{
 section img{
     width: 100%;
     height: min-content;
-    border-radius: 1em;
+    border-radius: 10px;
 
     min-width: 340px;
     max-width: 790px;
@@ -179,6 +198,10 @@ section img{
 /* Footer Styling */
 footer{
     background-color: var(--mainFooterColour);
+
+    
+    border-top-left-radius: 15px;;
+    border-top-right-radius: 15px;;
 }
 /* END Footer Styling */
 
@@ -212,7 +235,7 @@ footer{
         flex-direction: row;      
         margin-left: 10px;
     }
-    main > section >section div{
+    main > section >section > div{
         margin-left: 30px;
         margin-right: 10px;
     }
