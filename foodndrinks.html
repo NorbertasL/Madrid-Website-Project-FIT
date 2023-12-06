@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/mainStyle.css">
   </head>
   <body>
-    <div>     
+    <div id="mobileNavContainer">     
       <input type="checkbox" id="hamburgerInput" class="burgerShower"/>
       <label id="hamburgerMenu" for="hamburgerInput">
         <nav id="mainNavigationMenu">
@@ -23,7 +23,18 @@
       </label>
     </div>
     <header id ="pageHeader">
-        <h1>Welcome to Madrid!</h1>
+      <h1>Food & Drinks</h1>
+      <div id="desktopNavContainer"> 
+          <nav id="mainNavigationMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="accomidations.html">Accomidations</a></li>
+                <li id="currentNavLink"><a href="foodndrinks.html">Food & Drinks</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+          </nav>
+      </div>     
     </header>
     <main class="flexContainerColumn">
       <section>

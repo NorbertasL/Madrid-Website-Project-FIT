@@ -127,6 +127,10 @@ body {
     background-color: var(--mainNavSelectedColour);
     box-shadow: 3px 0px 5px 0px var(--mainNavSelectedColour);
 }
+
+#desktopNavContainer{
+    display: none;
+}
  
 
 /* END Navigation Styling */
@@ -243,6 +247,18 @@ footer{
     section img{
         width: 400px;
         
+    }
+    #desktopNavContainer{
+        display: flex;
+        
+    }
+    #mobileNavContainer{
+        display: none;
+    }
+
+    #mainNavigationMenu li{
+        display:inline;
+        color: red;
     }
 
    
