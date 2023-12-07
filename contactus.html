@@ -36,8 +36,9 @@
           </nav>
       </div>     
     </header>
-    <main class="flexContainer">
-      <h2>Form Validation</h2>
+    <main class="flexContainerColumn">
+      <div id = "contactFormContainer">
+        <h2>Contact Form</h2>
         <form id="myForm" action="" novalidate>
           <div class="form-control">
             <label for="fullName">Your full name</label>
@@ -51,7 +52,20 @@
             <div class="field-error"></div>
           </div>
 
-          <input type="submit" value="Go!" />
+          <div class="form-control">
+            <label for="message">Your message:</label><br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+          </div>
+
+          <input type="submit" value="Send!" />
+        </form>
+
+
+      </div>
+      
+    </main>
+      
+          
 
       <script src="js/form.js"></script>
     </main>
