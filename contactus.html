@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="css/mainStyle.css">
-  </head>
-  <body>
-    <div id="mobileNavContainer">     
-      <input type="checkbox" id="hamburgerInput" class="burgerShower"/>
-      <label id="hamburgerMenu" for="hamburgerInput">
-        <nav id="mainNavigationMenu">
-          <h3>Menu</h3>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="attractions.html">Attractions</a></li>
-              <li><a href="accomidations.html">Accomidations</a></li>
-              <li><a href="foodndrinks.html">Food & Drinks</a></li>
-              <li id="currentNavLink"><a href="contactus.html">Contact Us</a></li>
-          </ul>
-        </nav>
-      </label>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/mainStyle.css">
+</head>
+
+<body>
+  <div id="mobileNavContainer">
+    <input type="checkbox" id="hamburgerInput" class="burgerShower" />
+    <label id="hamburgerMenu" for="hamburgerInput">
+      <nav id="mainNavigationMenu">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="accomidations.html">Accomidations</a></li>
+          <li><a href="foodndrinks.html">Food & Drinks</a></li>
+          <li id="currentNavLink"><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </label>
+  </div>
+  <header id="pageHeader">
+    <h1>Contact Us!</h1>
+    <div id="desktopNavContainer">
+      <nav id="mainNavigationMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="accomidations.html">Accomidations</a></li>
+          <li><a href="foodndrinks.html">Food & Drinks</a></li>
+          <li id="currentNavLink"><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
-    <header id ="pageHeader">
-      <h1>Contact Us!</h1>
-      <div id="desktopNavContainer"> 
-          <nav id="mainNavigationMenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
-                <li><a href="accomidations.html">Accomidations</a></li>
-                <li><a href="foodndrinks.html">Food & Drinks</a></li>
-                <li id="currentNavLink"><a href="contactus.html">Contact Us</a></li>
-            </ul>
-          </nav>
-      </div>     
-    </header>
-    <main class="flexContainerColumn">
-      <div id = "contactFormContainer">
-        <h2>Contact Form</h2>
-        <form id="myForm" action="" novalidate>
-          <div class="form-control">
-            <label for="fullName">Your full name</label>
-            <input required id="fullName" type="text" name="full_name" />
-            <div class="field-error"></div>
-          </div>
+  </header>
+  <main class="flexContainerColumn">
+    <div id="contactFormContainer">
+      <h2>Contact Form</h2>
+      <form id="myForm" action="" novalidate>
+        <div class="form-control">
+          <label for="fullName">Your full name</label>
+          <input required id="fullName" type="text" name="full_name" />
+          <div class="field-error"></div>
+        </div>
 
-          <div class="form-control">
-              <label for="emailAddress">Your email</label>
-              <input required id="emailAddress" type="email" name="email_address" />
-            <div class="field-error"></div>
-          </div>
+        <div class="form-control">
+          <label for="emailAddress">Your email</label>
+          <input required id="emailAddress" type="email" name="email_address" />
+          <div class="field-error"></div>
+        </div>
 
-          <div class="form-control">
-            <label for="message">Your message:</label><br />
-            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-          </div>
+        <div class="form-control">
+          <label for="message">Your message:</label><br />
+          <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+        </div>
 
-          <input type="submit" value="Send!" />
-        </form>
+        <input type="submit" value="Send!" />
+      </form>
 
 
-      </div>
-      
-    </main>
-      
-          
+    </div>
 
-      <script src="js/form.js"></script>
-    </main>
-    <footer>Social Links Here</footer>
-  </body>
+  </main>
+  <footer>Social Links Here</footer>
+  <script src="js/form.js"></script>
+</body>
+
 </html>
