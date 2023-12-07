@@ -2,8 +2,8 @@
     /* Website Main Colours https://designs.ai/colors/palette/337*/
     --websiteMainColour: #00d1ff;
     --websiteSecondColour: #00fff0;
-    --websiteThirdColour:#fff5d0;
-    --websiteFouthColour:#fcebad;
+    --websiteThirdColour: #fff5d0;
+    --websiteFouthColour: #fcebad;
     /* END Website Main Colours */
 
     /* Main navigation Colours */
@@ -18,16 +18,18 @@
     --mainFooterColour: var(--mainNavColour);
     /* END Footer Colours */
 
-    
-  }
+
+}
 
 /* *-allows to select all elements, using this to remove 
 default styling on a global level */
-*{
-    padding: 0; /*Removing default padding */
-    margin: 0;  /*Removing default margins */
+* {
+    padding: 0;
+    /*Removing default padding */
+    margin: 0;
+    /*Removing default margins */
     font-family: Sans-serif;
-    
+
 }
 
 /* Page Fade In */
@@ -43,16 +45,17 @@ body {
     /* max width so it still looks ok on big screens like tvs */
     max-width: 1400px;
     margin: auto;
- 
+
 }
- 
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-     }
+    }
 }
 
 
@@ -64,19 +67,17 @@ body {
     position: absolute;
     width: 40px;
     height: 40px;
-    background: linear-gradient(
-        to bottom, 
-        #000 0%, #000 20%, 
-        #fff 20%, #fff 40%,
-        #000 40%, #000 60%, 
-        #fff 60%, #fff 80%,
-        #000 80%, #000 100%
-    );
+    background: linear-gradient(to bottom,
+            #000 0%, #000 20%,
+            #fff 20%, #fff 40%,
+            #000 40%, #000 60%,
+            #fff 60%, #fff 80%,
+            #000 80%, #000 100%);
     border: 1px solid #000;
     border-radius: 0px 0px 40px 0px;
 
 }
- 
+
 #hamburgerMenu #mainNavigationMenu {
     visibility: hidden;
     position: fixed;
@@ -92,54 +93,63 @@ body {
     box-sizing: border-box;
     box-shadow: 0 0 5px 10px var(--websiteThirdColour);
 }
-  
+
 #hamburgerMenu h3 {
     text-align: center;
     color: var(--mainNavTextColour);
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-size: 2.2rem;
 }
-#mainNavigationMenu a, #mainNavigationMenu a:visited {
+
+#mainNavigationMenu a,
+#mainNavigationMenu a:visited {
     color: var(--mainNavTextColour);
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
     text-decoration: none;
 }
-#mainNavigationMenu li{
+
+#mainNavigationMenu li {
     padding: 10px;
 }
+
 /* Checkbox that shows and hides the navigation menu */
-#hamburgerInput{
+#hamburgerInput {
     display: none;
 }
-#hamburgerInput:checked + #hamburgerMenu #mainNavigationMenu {
+
+#hamburgerInput:checked+#hamburgerMenu #mainNavigationMenu {
     visibility: visible;
     left: 0;
 }
 
 /* Styling for the current nav link */
-#currentNavLink, #currentNavLink a, #currentNavLink a:visited{
-    pointer-events: none; /* Disables click event */
-    
-    color: var(--mainNavSelectedTextColour);  
+#currentNavLink,
+#currentNavLink a,
+#currentNavLink a:visited {
+    pointer-events: none;
+    /* Disables click event */
+
+    color: var(--mainNavSelectedTextColour);
 }
-#currentNavLink{
+
+#currentNavLink {
     background-color: var(--mainNavSelectedColour);
     box-shadow: 3px 0px 5px 0px var(--mainNavSelectedColour);
 }
 
-#desktopNavContainer{
+#desktopNavContainer {
     display: none;
 }
- 
-.shopIcon{
+
+.shopIcon {
     width: 30px;
 }
 
 /* END Navigation Styling */
 
 /* Header Styling */
-#pageHeader{
+#pageHeader {
     /* 
     background-color: var(--websiteMainColour);
     */
@@ -147,22 +157,25 @@ body {
     background-image: linear-gradient(var(--websiteMainColour) 50%, var(--websiteThirdColour));
     padding: 2px;
 
-    border-bottom-left-radius: 15px;;
-    border-bottom-right-radius: 15px;;
+    border-bottom-left-radius: 15px;
+    ;
+    border-bottom-right-radius: 15px;
+    ;
 }
-h1{
+
+h1 {
     font-size: 3em;
     text-align: center;
     text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-header h2{
+header h2 {
     padding-left: 15px;
     padding-top: 10px;
 }
 
 /* END Header Styling */
-main > section{
+main>section {
 
     /* testing value
     border: 4px solid #ff00ff;
@@ -177,7 +190,7 @@ main > section{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-main > section section{
+main>section section {
     margin: 5px;
     margin-top: 15px;
 
@@ -187,53 +200,57 @@ main > section section{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-main p{
+main p {
     margin-top: 0.5em;
 }
 
-section img{
+section img {
     width: 100%;
     height: min-content;
     border-radius: 10px;
 
     min-width: 340px;
     max-width: 790px;
-    
+
 }
 
 
 /* Footer Styling */
-footer{
+footer {
     background-color: var(--mainFooterColour);
 
-    
-    border-top-left-radius: 15px;;
-    border-top-right-radius: 15px;;
+
+    border-top-left-radius: 15px;
+    ;
+    border-top-right-radius: 15px;
+    ;
 }
+
 /* END Footer Styling */
 
-.flexContainerColumn{
+.flexContainerColumn {
     display: flex;
     flex-direction: column;
 }
-.flexContainer{
+
+.flexContainer {
     display: flex;
 }
 
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
 
-.shopVisibility{
-    display:inline; 
+.shopVisibility {
+    display: inline;
 }
 
 /*Form Styling */
-#contactFormContainer{
+#contactFormContainer {
     margin: 5px auto;
     padding: 10px;
-    
+
 
     border-radius: 10px;
 
@@ -248,11 +265,13 @@ textarea {
     min-height: 10em;
 }
 
-label, input, textarea {
+label,
+input,
+textarea {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    
+
 
     border-radius: 3px;
 }
@@ -270,48 +289,49 @@ label, input, textarea {
 /* END Form styling*/
 
 @media screen and (min-width: 450px) {
-    h1{
-        font-size: 2.5em; 
+    h1 {
+        font-size: 2.5em;
     }
 }
 
 @media screen and (min-width: 530px) {
-    h1{
-        font-size: 3em; 
+    h1 {
+        font-size: 3em;
     }
 }
+
 @media screen and (min-width: 800px) {
-    main > section section {
+    main>section section {
         display: flex;
-        flex-direction: row;      
+        flex-direction: row;
         margin-left: 10px;
     }
-    main > section >section > div{
+
+    main>section>section>div {
         margin-left: 30px;
         margin-right: 10px;
     }
 
-    section img{
+    section img {
         width: 400px;
-        
+
     }
-    #desktopNavContainer{
+
+    #desktopNavContainer {
         display: flex;
-        
+
     }
-    #mobileNavContainer{
+
+    #mobileNavContainer {
         display: none;
     }
 
-    #mainNavigationMenu li{
-        display:inline;
-        
+    #mainNavigationMenu li {
+        display: inline;
+
     }
-    #pageHeader{
+
+    #pageHeader {
         padding-bottom: 10px;
     }
 }
-
-
-    
-

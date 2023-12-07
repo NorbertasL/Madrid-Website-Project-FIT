@@ -1,9 +1,9 @@
-function showMore(paragraph, link){
+function showMore(paragraph, link) {
     paragraph.classList.toggle("hide");
-    if(link.innerHTML === "Show More"){
+    if (link.innerHTML === "Show More") {
         link.innerHTML = "Show Less"
-    }else{
+    } else {
         link.innerHTML = "Show More"
     }
-    
+
 }

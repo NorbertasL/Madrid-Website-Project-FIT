@@ -1,13 +1,13 @@
 
-    
 
-document.addEventListener("DOMContentLoaded", function() {
+
+document.addEventListener("DOMContentLoaded", function () {
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     const cartItems = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
 
     const setUpCart = document.querySelectorAll(".set-up-cart");
-    
+
 
     addToCartButtons.forEach(button => {
         button.addEventListener("click", addToCart);
