@@ -132,6 +132,9 @@ body {
     display: none;
 }
  
+.shopIcon{
+    width: 30px;
+}
 
 /* END Navigation Styling */
 
