@@ -225,6 +225,10 @@ footer{
     display:none;
 }
 
+.shopVisibility{
+    display:inline; 
+}
+
 /*Form Styling */
 #contactFormContainer{
     margin: 5px auto;

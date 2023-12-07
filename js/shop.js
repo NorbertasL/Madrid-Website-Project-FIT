@@ -1,13 +1,13 @@
-//Booking
-function bookSeats(restourant){
-    console.log("Seat Booked for "+restourant);
-}
+
     
 
 document.addEventListener("DOMContentLoaded", function() {
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     const cartItems = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
+
+    const setUpCart = document.querySelectorAll(".set-up-cart");
+    
 
     addToCartButtons.forEach(button => {
         button.addEventListener("click", addToCart);
@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Save the cart to local storage
         saveCart(ticketId);
     }
+
+
     /*event.target: 
     refers to the element that triggered the event, which is the button with the class "add-to-cart.
     When a user clicks the "Add to Cart" button, event.target will point to that button element.

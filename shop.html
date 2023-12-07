@@ -7,41 +7,77 @@
     <title>Ticket Sales Cart</title>
 </head>
 <body>
-    <h1>Ticket Sales</h1>
+    
+        <div id="mobileNavContainer">     
+          <input type="checkbox" id="hamburgerInput" class="burgerShower"/>
+          <label id="hamburgerMenu" for="hamburgerInput">
+            <nav id="mainNavigationMenu">
+              <h3>Menu</h3>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="attractions.html">Attractions</a></li>
+                  <li><a href="accomidations.html">Accomidations</a></li>
+                  <li><a href="foodndrinks.html">Food & Drinks</a></li>
+                  <li><a href="contactus.html">Contact Us</a></li>
+                  <li id="currentNavLink"><a class="shopVisibility" href="shop.html">Shop</a></li>
+              </ul>
+            </nav>
+          </label>
+        </div>
+        <header id ="pageHeader">
+            <h1>Book Now</h1>
+            <div id="desktopNavContainer"> 
+                <nav id="mainNavigationMenu">
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="attractions.html">Attractions</a></li>
+                      <li><a href="accomidations.html">Accomidations</a></li>
+                      <li><a href="foodndrinks.html">Food & Drinks</a></li>
+                      <li><a href="contactus.html">Contact Us</a></li>
+                      <li id="currentNavLink"><a class="shopVisibility" href="shop.html">Shop</a></li>
+                  </ul>
+                </nav>
+            </div>     
+        </header>
+        <main class="flexContainerColumn">
+            <div class="tickets">
+                <div class="ticket" data-id="1">
+                    <h2>Restourant 1</h2>
+                    <p>Price: $50 pp</p>
+                    <label for="event1-quantity">Quantity:</label>
+                    <input type="number" id="event1-quantity" value="0" min="0">
+                    <button class="remove-from-cart">-</button>
+                    <button class="add-to-cart">+</button>
+                </div>
+            
+                <div class="ticket" data-id="2">
+                    <h2>Restourant 2</h2>
+                    <p>Price: $60 pp</p>
+                    <label for="event2-quantity">Quantity:</label>
+                    <input type="number" id="event2-quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            
+                <div class="ticket" data-id="3">
+                    <h2>Restourant 3</h2>
+                    <p>Price: $70 pp</p>
+                    <label for="event3-quantity">Quantity:</label>
+                    <input type="number" id="event3-quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            </div>
+            <h2>Shopping Cart</h2>
+            <div class="cart">
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total">0</span></p>
+            </div>
         
-    <div class="tickets">
-        <div class="ticket" data-id="1">
-            <h2>Event 1 Ticket</h2>
-            <p>Price: $50</p>
-            <label for="event1-quantity">Quantity:</label>
-            <input type="number" id="event1-quantity" value="0" min="0">
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    
-        <div class="ticket" data-id="2">
-            <h2>Event 2 Ticket</h2>
-            <p>Price: $60</p>
-            <label for="event2-quantity">Quantity:</label>
-            <input type="number" id="event2-quantity" value="0" min="0">
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    
-        <div class="ticket" data-id="3">
-            <h2>Event 3 Ticket</h2>
-            <p>Price: $70</p>
-            <label for="event3-quantity">Quantity:</label>
-            <input type="number" id="event3-quantity" value="0" min="0">
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    </div>
-    
-    </div>
-    <h2>Shopping Cart</h2>
-    <div class="cart">
-        <ul id="cart-items"></ul>
-        <p>Total: $<span id="cart-total">0</span></p>
-    </div>
-
-    <script src="js/shop.js"></script>
+            <script src="js/shop.js"></script>
+        </main>
+        <footer>Social Links Here</footer>
+      
 </body>
+
 </html>
